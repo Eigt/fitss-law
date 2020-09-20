@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Cursor
   - Target
+  - StartText
+  - InfoText
   layers:
   - Default
   - TransparentFX
