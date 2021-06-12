@@ -61,6 +61,8 @@ public class CursorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 startPos = this.transform.position;
+
         float moveX = Input.GetAxis("Mouse X") * m_sensitivityX;
         float moveY = Input.GetAxis("Mouse Y") * m_sensitivityY;
 
@@ -86,6 +88,9 @@ public class CursorController : MonoBehaviour
         {
             transform.Translate(moveX, moveY, 0);
         }
+
+        // create line
+        LineController.DrawLine(startPos, transform.position);
 
         // left click
         if (m_isReturnToStart == false &&
